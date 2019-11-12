@@ -33,4 +33,7 @@ HostName github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_github```
 
+参考链接：
+https://segmentfault.com/a/1190000013798839?utm_source=tag-newest
+
 
