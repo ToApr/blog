@@ -93,14 +93,14 @@ comments: true
 ***Binding***:RabbitMQ通过绑定将交换器和队列关联起来，在绑定的时候一般会指定一个绑定键，这样RabbitMQ就可以指定如何正确的路由到队列了。从这里我们可以看到在RabbitMQ中交换器和队列实际上可以是一对多，也可以是多对多关系。交换器和队列就像我们关系数据库中的两张表。它们同归BindingKey做关联(多对多关系表)。在我们投递消息时，可以通过Exchange和RoutingKey(对应BindingKey)就可以找到相对应的队列。
 # RabbitMQ主要有四种类型的交换器：
 * ***fanout***:扇形交换器，它会把发送到该交换器的消息路由到所有与该交换器绑定的队列中。如果使用扇形交换器，则不会匹配路由Key
-![fanout](https://github.com/ToApr/image/blob/master/fanout.png)
+![fanout](/images/fanout.png)
 
 *  ***direct***:direct交换器，会把消息路由到RoutingKey与BindingKey完全匹配的队列中。
-![direct](https://github.com/ToApr/image/blob/master/direct.png)
+![direct](/images//direct.png)
 *  ***topic***:完全匹配BindingKey和RoutingKey的direct交换器有些时候并不能满足实际业务的需求。topic类型的交换器在匹配规则上进行了扩展，它与direct类型的交换器相似，也是将消息路由到BindingKey和RoutingKey相匹配的队列中，但这里的匹配规则有些不同，它约定•	RoutingKey为一个点号"."分隔的字符串(被点号"."分隔开的每一段独立的字符串称为一个单词)，如"hs.rabbitmq.client"，"com.rabbit.client"等。
 BindingKey和RoutingKey一样也是点号"."分隔的字符串；
 BindingKey中可以存在两种特殊字符串"*"和"#"，用于做模糊匹配，其中"*"用于匹配一个单词，"#"用于匹配多规格单词(可以是零个)
-![topic](https://github.com/ToApr/image/blob/master/topic.png)
+![topic](/images/topic.png)
 * ***header***不常用
 # 代码
 客户端API向导：https://www.rabbitmq.com/dotnet-api-guide.html
@@ -109,7 +109,7 @@ BindingKey中可以存在两种特殊字符串"*"和"#"，用于做模糊匹配�
 RPC ， 是Remote Procedure Call 的简称，即远程过程调用。它是一种通过网络从远程计算
 机上请求服务，而不需要了解底层网络的技术。RPC 的主要功用是让构建分布式计算更容易，在提供强大的远程调用能力时不损失本地调用的语义简洁性。通俗点来说，假设有两台服务器A 和B ， 一个应用部署在A 服务器上，想要调用B 服务器上应用提供的函数或者方法，由于不在同一个内存空间， 不能直接调用，需要通过网络来表达调用的语义和传达调用的数据。
 
-![rpc](https://github.com/ToApr/image/blob/master/rpc.png)
+![rpc](/images/rpc.png)
 
 ## RPC 的处理流程如下
 1. 当客户端启动时，创建一个匿名的回调队列(名称由RabbitMQ 自动创建，图4-7 中的回调队列为amq.gen-LhQzlgv3GhDOv8PIDabOXA ) 。
