@@ -2,6 +2,7 @@
 title: SSH自动加载密钥
 date: 2019-11-11 20:29:15
 tags:  git
+categories: 技术
 ---
 
 # 如何让SSH自动加载密钥?

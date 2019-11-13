@@ -2,6 +2,7 @@
 title: RabbitMq集群
 date: 2019-11-05 17:11:21
 tags: rabbitmq
+categories: 技术
 ---
 # RabbitMq 集群
   三台机子 - rabbit1，rabbit2， rabbit3
