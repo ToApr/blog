@@ -2,6 +2,7 @@
 title: 初始RabbitMQ
 date: 2019-11-05 16:43:23
 tags: rabbitmq
+categories: 技术
 comments: true
 ---
 
